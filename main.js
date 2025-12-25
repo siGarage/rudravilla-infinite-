@@ -81,3 +81,18 @@ ScrollReveal().reveal(".menu__col", {
   ...scrollRevealOption,
   interval: 500, // 0.5s stagger between categories
 });
+
+
+menuBtn.addEventListener("click", (e) => {
+  navLinks.classList.toggle("open");
+
+  // Optional: Change the icon from 'menu' to 'close' when open
+  const isOpen = navLinks.classList.contains("open");
+  menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+});
+
+// Close the menu when a link is clicked
+navLinks.addEventListener("click", (e) => {
+  navLinks.classList.remove("open");
+  menuBtnIcon.setAttribute("class", "ri-menu-line");
+});
