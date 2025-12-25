@@ -16,7 +16,7 @@ navLinks.addEventListener("click", (e) => {
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
-  duration: 1000,
+  duration: 1500,
 };
 
 // header container
@@ -64,3 +64,20 @@ function nextSlide() {
 
 // Change slide every 3 seconds
 setInterval(nextSlide, 3000);
+
+// distance container reveal
+ScrollReveal().reveal(".distance__card", {
+  ...scrollRevealOption,
+  interval: 500,
+});
+
+// attractions container reveal
+ScrollReveal().reveal(".attractions__card", {
+  ...scrollRevealOption,
+  interval: 500, // This creates the staggered effect (0.5s between each card)
+});
+
+ScrollReveal().reveal(".menu__col", {
+  ...scrollRevealOption,
+  interval: 500, // 0.5s stagger between categories
+});
