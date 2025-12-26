@@ -513,6 +513,45 @@ nav {
   justify-content: center;
   align-items: center;
 }
+/* WhatsApp Sticky Button */
+.whatsapp-sticky {
+  position: fixed;
+  bottom: 30px; /* Distance from bottom */
+  right: 30px;  /* Distance from right */
+  background-color: #25d366; /* WhatsApp Green */
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10000; /* Ensures it stays above all other elements */
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-sticky:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+/* Optional Tooltip similar to your screenshot */
+.whatsapp-tooltip {
+  position: absolute;
+  right: 70px;
+  background-color: white;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
 
 /* Adjust for Mobile */
 @media (max-width: 768px) {
